@@ -7,6 +7,12 @@ def play_rps():
     player_score = 0
     computer_score = 0
 
+    rulers = {
+        "rock":"scissors",
+        "scissors":"paper",
+        "paper":"rock"
+    }
+
     while True:
         print("Enter 'q' to quit.")
         player = input("Choose 'rock', 'paper', 'scissors', 'q':\n")
@@ -24,9 +30,7 @@ def play_rps():
 
         if player == computer:
             print("It's a tie.")
-        elif (player == "rock" and computer == "scissors")\
-        or (player == "scissors" and computer == "paper")\
-        or (player == "paper" and computer == "rock"):
+        elif rulers[player] == computer:
             print("You win!\n")
             player_score += 1
         else:
