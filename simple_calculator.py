@@ -2,7 +2,6 @@ def simple_calculator():
     print("Welcome to Simple Calculator!")
     print("You enter 'q' anytime to quit.")
 
-
     while True:
         num1 = input("Please enter the first number:\n")
         if num1.lower() == 'q':
